@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notEmpty: {
           args: true,
-          msg: "El campo nombre (title) es requerido",
+          msg: "El campo titulo (title) es requerido",
         },
       },
     },
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notEmpty: {
           args: true,
-          msg: "Se debe introducir una descripción",
+          msg: "El campo descripción (description) es obligatorio",
         },
       },
     },

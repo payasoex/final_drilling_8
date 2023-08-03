@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notEmpty: {
           args: true,
-          msg: "El Campo del nombre es requerido",
+          msg: "El campo nombre es obligatorio",
         },
       },
     },
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notEmpty: {
           args: true,
-          msg: "El Campo del apellido es requerido",
+          msg: "El campo apellido es obligatorio",
         },
       },
     },
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notEmpty: {
           args: true,
-          msg: "el correo electronico es requerido",
+          msg: "el email es requerido",
         },
         isEmail: {
           args: true,
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       unique: {
         args: true,
-        msg: "correo electrónico actualmente registrado en la base de datos!",
+        msg: "Este email ya se encuentra registrado en la base de datos",
       },
     },
     password: {
@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notEmpty: {
           args: true,
-          msg: "el password no puede ser vacío y como mínimo 8 caracteres",
+          msg: "el password debe tener 8 caracteres como mínimo",
         },
         min: 8,
       },
